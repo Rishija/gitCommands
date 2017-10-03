@@ -1,0 +1,62 @@
+new repo
+	git init repo_name
+
+copy from existing repo in system
+	git clone url
+
+see history
+	git log
+	git log --oneline
+	git log --oneline --color --graph --decorate		//graph for creation, deletion and merging of branches
+
+create new branch
+	git checkout -b branchName
+
+see the current branch
+	git branch
+
+change branch to b_n
+	git checkout b_n
+
+merge branchNmae in current branch
+	git merge branchName
+
+difference b/w current code and previous code
+	git diff
+
+see status of files not tracked or commited
+	git status
+
+what to track ( what to put in staging area)
+	git add	files_name				//space in b/w
+	git add -A 						//all
+	git add .						//exclude deleted
+	git add -u 						//exclude new files
+
+commit files
+	git commit -m "message here"
+
+change editor
+	git config --global core.editor="textedit.exe"
+
+change username and email
+	git config --global user.name "myName"
+	git config --global user.email "example@google.com"
+
+create alias for commands
+	git config --global alias.aliasName "git_command_here with flags"
+
+********github*********
+
+create new repo
+	git remote add origin url_here		//need to create a repo on github. url_here = url to this repo
+
+push
+	git push origin branchName
+
+push all branches
+	git push origin --all
+
+//if direct changes to a repo are not allowed
+fork				//copy repo in account
+pull request		//ask to merge the changes
